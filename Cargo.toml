@@ -1,0 +1,8 @@
+[package]
+name = "arithmetic_circuits"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+alloy-primitives = "0.8.22"
+dag = { git = "https://github.com/ThomasAqu1nas/dag.git" }
