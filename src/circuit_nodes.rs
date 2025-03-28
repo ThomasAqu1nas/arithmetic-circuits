@@ -81,12 +81,7 @@ pub struct OutputNode {
     output: U256
 }
 
-/// Вспомогательная функция для «заворачивания» результата арифметического узла в InputNode.
-/// В реальной схеме это может быть реализовано через передачу промежуточного результата дальше.
-/// Здесь используется для возможности включить результат предыдущего ArithmeticGateNode
-/// в качестве входа для следующей операции.
 pub fn wrap_arithmetic_result(arith: &ArithmeticGateNode) -> InputNode {
-    // Создаем новый InputNode с тем же значением, помечая его как приватное.
     InputNode::new(0, InputNodeVisibility::Private, arith.output, true)
 }
 
